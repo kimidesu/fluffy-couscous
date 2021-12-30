@@ -1,9 +1,13 @@
-<h1>Hi {{currentUser.firstName}}!</h1>
-<p>You're logged in with Angular 7!!</p>
-<h3>All registered users:</h3>
-<ul>
-  <li *ngFor="let user of users">
-    {{user.username}} ({{user.firstName}} {{user.lastName}})
-    - <a (click)="deleteUser(user.id)" class="text-danger">Delete</a>
-  </li>
-</ul>
+<div class="card" style="width: 50rem;">
+  <div class="card-body">
+    <h1 class="card-title">Hi {{currentUser.firstName}}!</h1>
+    <h6 class="card-subtitle mb-2 text-muted">You're logged-in!</h6>
+    <p class="card-text">All registered users:</p>
+    <ul>
+      <li *ngFor="let user of users">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        <button type="button" class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+</div>
